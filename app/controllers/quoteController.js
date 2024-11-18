@@ -1,11 +1,7 @@
-function fetchQuote() {
-    fetch("https://api.quotable.io/random")
-        .then((response) => response.json())
-        .then((data) => {
-            document.getElementById("quote").textContent = `"${data.content}"`;
-            document.getElementById("author").textContent = `- ${data.author}`;
-        })
-        .catch(() => {
-            console.error("Failed to fetch quote.");
-        });
+export class QuoteController {
+
+    // TODO on page load fire request to go get your quote
+    // TODO draw the quote
 }
+
+

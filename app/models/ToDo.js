@@ -10,7 +10,11 @@ export class ToDO {
         this.id = data.id
         this.description = data.description
         this.completed = data.completed
-
-
     }
+
+
+    get template() {
+        return `<div>${this.description}</div>`
+    }
+
 }

@@ -21,8 +21,6 @@ export class ToDoController {
         // listen for the user, when they "log in", re-draw the cars (the template will re-evaluate if it should include the delete button)
     }
 
-
-
     async postToDo() {
         try {
             event.preventDefault()
@@ -62,16 +60,14 @@ export class ToDoController {
         }
     }
 
-
-
-
-
     drawToDos() {
         if (!AppState.toDos) { return }
-        let html = "todo, deletetodo, edittodo";
-        html += "<div>todo stuff</div>"
+        let html = "";
+
+        AppState.toDos.forEach(t => html += t.template)
+
         // the second string is the constructed HTML for each ToDo.
-        setHTML('todos', `dletetoDo, edittodo`)
+        setHTML('todos', html)
     }
 
 }
