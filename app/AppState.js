@@ -5,8 +5,15 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
 
+
+
+
   /**@type {ToDO[]} */
-  ToDo = []
+  toDos = []
+  /**@type {ToDO[]} */
+  deleteToDo = []
+  /**@type {ToDO[]} */
+  editToDo = []
 
   user = null
   /**@type {import('./models/Account.js').Account | null} */

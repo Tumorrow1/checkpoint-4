@@ -39,18 +39,18 @@
   </header>
 
   <!-- SECTION -->
-  <main>
+  <main class="background-img">
+
 
     <h1>To Do List</h1>
 
-    <form id="create-ToDo" onsubmit="app.s.postToDo()">
+    <form id="create-ToDo" onsubmit="app.ToDoController.postToDo()">
       <input placeholder="description" name="description" type="text">
       <button type="submit">add</button>
     </form>
 
     <span id="time"></span>
     <span id="date"></span>
-    </header>
     <div id="todos">
     </div>
 

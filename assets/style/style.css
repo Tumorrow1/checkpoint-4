@@ -9,3 +9,15 @@
 .profile-picture.profile-picture-sm {
   height: 64px;
 }
+
+
+
+
+
+.background-img{ 
+  background-image: url(https://media.istockphoto.com/id/1253992491/photo/view-of-the-seiser-alm-one-of-the-biggest-alpine-meadows-on-the-dolomites-with-the-sassolungo.jpg?s=2048x2048&w=is&k=20&c=i1RiL3VW2BieRCxhwDds11yLEt9yQeYV_EgvKMYba5s=);
+  
+  background-position: center;
+  background-size: cover;
+
+}

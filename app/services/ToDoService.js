@@ -11,11 +11,33 @@ class ToDoService {
         const response = await api.post(`api/todos`, formdata)
         console.log(`📝✔️`, response.data);
         const createdToDo = new ToDO(response.data)
-        AppState.ToDo.push(createdToDo)
+        AppState.toDos.push(createdToDo)
     }
 
-}
+    async deleteToDo(formdata) {
+        const response = await api.post(`api/todos`, formdata)
+        console.log(`📝✔️`, response.data);
+        const createdToDo = new ToDO(response.data)
+        AppState.toDos.push(createdToDo)
 
+    }
+
+    async editToDo(formdata) {
+        const response = await api.post(`api/todos`, formdata)
+        console.log(`📝✔️`, response.data);
+        const createdToDo = new ToDO(response.data)
+        AppState.toDos.push(createdToDo)
+    }
+    async fetchToDos() {
+        const response = await api.get(`api/todos`)
+        console.log(`📝✔️`, response.data);
+
+        const toDos = response.data.map(toDo => new ToDO(toDo))
+        AppState.toDos = toDos
+    }
+
+
+}
 
 
 
